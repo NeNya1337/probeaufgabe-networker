@@ -97,11 +97,16 @@
             display: initial !important;
         }
     </style>
+    <script>
+        window.onload = function () {
+            document.querySelector("#uploadbutton").addEventListener('mousedown', function(){document.querySelector("#csvfile").click(); });
+        }
+    </script>
 </head>
 <body>
 <form action="/" id="csv_import" method="post" enctype="multipart/form-data">
         <div>
-            <div class="button">
+            <div class="button" id="uploadbutton">
                 <label for="csvfile">
                     Datei auswählen
                     <input id="csvfile" class='content-item' type="file" name="csvfile" required="required">
