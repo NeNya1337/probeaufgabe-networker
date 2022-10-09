@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bestätigung</title>
+    <style>
+        body {
+            background: #bbcadd;
+        }
+        .content-item {
+            text-align: center;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        button {
+            width: 20em;
+        }
+
+        form > * {
+            margin: 5px 0;
+        }
+        form {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<form class='content-item' action="/mailconfirmed.php" id="confirm" method="post">
+    <input type="hidden" name="delete" value="1">
+    %TEXT%
+</form>
+</body>
+</html>

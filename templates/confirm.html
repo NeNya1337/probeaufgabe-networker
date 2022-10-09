@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bestätigung</title>
+    <style>
+        body {
+            background: #bbcadd;
+        }
+        .content-item {
+            text-align: center;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        button {
+            width: 20em;
+        }
+
+        form > * {
+            margin: 5px 0;
+        }
+        form {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<h2>Sehr geehrter Herr/Frau %NAME%,</h2>
+<p>Vielen Dank, dass Sie auf dem Laufenden bleiben wollen.</p>
+<p>Um dies zu bestätigen, klicken Sie bitte hier:</p>
+<form method="post" action="mailconfirmed.php">
+    <input type="hidden" name="hash" value="%HASHVALUE%">
+    <input type="hidden" name="delete" value="%DELETEVALUE%">
+    <button>Ja, ich will.</button>
+</form>
+<p><strong>Ihre Firma TollesWeb</strong></p>
+<p>Musterstraße 1a</p>
+<p>12345 Neustadt</p>
+</body>
+</html>
